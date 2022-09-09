@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Kanban</h1>
+        <article>
+            <section class="board mainBoard">
+                <form action="#">
+                    <h3>Add Notes</h3>
+                    <div class="note">
+                        <div >
+                            <label for="noteTitle">Title of note</label>
+                            <br>
+                            <input type="text" name="noteTitle" placeholder="Ex : Courses" maxlength="20" id="noteTitle">
+                        </div>
+                        <div>
+                            <label for="noteContent">Content of note</label>
+                            <br>
+                            <textarea name="noteContent" id="noteContent" placeholder= "Banane Citron" maxlength="200" rows="10" cols="20"></textarea>
+                        </div>
+                    </div>
+                    <button type="submit"> Valider</button>
+                </form>
+                <div class="deleteNote" ondragover="return over()" ondrop="return dropBin(event)">
+                    <h3>Delete Notes</h3>
+                    <img src="./dustbin_120823.png" alt="">
+                </div>
+            </section>
+        </article>
+    </header>
+    <main>
+        <article>
+            <h2>TO DO</h2>
+            <section class="board boardNote" ondragstart="start(event)" ondragover="return over()" ondrop="return drop(event)">
+            </section>
+        </article>
+        <article>
+            <h2>Done</h2>
+            <section class="board"  ondragstart="start(event)" ondragover="return over()" ondrop="return drop(event)">
+                
+            </section>
+        </article>
+        <article>
+            <h2>Verified</h2>
+            <section class="board"  ondragstart="start(event)" ondragover="return over()" ondrop="return drop(event)" >
+                
+            </section>
+        </article>
+    </main>
+    <script src="./kanban.js"></script>
+</body>
+</html>
